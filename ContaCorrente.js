@@ -9,14 +9,11 @@ export class ContaCorrente extends Conta {
         ContaCorrente.numeroDeContas += 1;
     }
 
+    // Sobrescrevendo o comportamento de sacar()
     sacar(valor) {
         let taxa = 1.1;
-        const valorSacado = taxa * valor;
-        super.sacar(valorSacado);
-    }
-
-    teste() {
-        super.teste();
-        console.log("Corrente");
+        // const valorSacado = taxa * valor;
+        // super.sacar(valorSacado);
+        return this._sacar(valor, taxa);
     }
 }
