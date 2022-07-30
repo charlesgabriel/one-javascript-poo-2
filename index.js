@@ -1,4 +1,5 @@
 import { Cliente } from "./Cliente.js";
+import { Conta } from "./Conta.js";
 import { ContaCorrente } from "./ContaCorrente.js";
 import { ContaPoupanca } from "./ContaPoupanca.js";
 
@@ -14,6 +15,10 @@ const contaPoupanca = new ContaPoupanca(cliente1, 1002, 50);
 contaPoupanca.sacar(10);
 
 console.log(contaPoupanca);
+
+const conta = new Conta(cliente1, 20, 0);
+
+console.log(conta);
 
 // const valorSacado = contaCorrenteCharles.sacar(50);
 // console.log(valorSacado);
