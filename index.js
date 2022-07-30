@@ -4,13 +4,16 @@ import { Diretor } from "./Funcionario/Diretor.js";
 import { SistemaAutenticacao } from "./SistemaAutenticacao.js";
 
 const diretor = new Diretor("Charles Gabriel", 123465798, 10000);
-diretor.cadastrarSenha("345678912");
-
-const diretorLogado = SistemaAutenticacao.login(diretor, "345678912");
-console.log(diretorLogado);
-
 const gerente = new Gerente("Ricardo", 456123798, 5000);
+const cliente = new Cliente("Lais", 456789123, "4321");
+
+diretor.cadastrarSenha("345678912");
 gerente.cadastrarSenha("123");
 
-const gerenteLogado = SistemaAutenticacao.login(gerente, "123");
-console.log(gerenteLogado);
+const diretorEstaLogado = SistemaAutenticacao.login(diretor, "345678912");
+const gerenteEstaLogado = SistemaAutenticacao.login(gerente, "123");
+const clienteEstaLogado = SistemaAutenticacao.login(cliente, "4321");
+
+console.log(diretorEstaLogado);
+console.log(gerenteEstaLogado);
+console.log(clienteEstaLogado);
